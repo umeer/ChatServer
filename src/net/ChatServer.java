@@ -10,7 +10,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * Server that accept connections from chat users.
+ * 
  * @author Claudio Cusano
  */
 public class ChatServer {
@@ -20,7 +21,7 @@ public class ChatServer {
     ServerSocket serverSocket = null;
     
     /**
-     * Server that accept connections from chat users.
+     * Server initialization.
      * 
      * @param chat the chat served by the server
      * @param port TCP port
@@ -30,18 +31,32 @@ public class ChatServer {
         this.port = port;
     }
     
+    
+    /**
+     * Start the server.
+     * 
+     * @throws IOException 
+     */
     public void startServer() throws IOException {
         serverSocket = new ServerSocket(port);
         
+        Logger.getLogger(ChatServer.class.getName()).log(Level.INFO,
+                        "Server started");
         while (true) {
             Socket socket = serverSocket.accept();
             RemoteUser u = new RemoteUser(chat, socket);
-            Logger.getLogger(UsersRegistry.class.getName()).log(Level.INFO,
+            Logger.getLogger(ChatServer.class.getName()).log(Level.INFO,
                         "Accepting a new user");
             u.start();
         }
     }
     
+    
+    /**
+     * Start the application.
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         final int PORT = 8888;
         final String USERS_FILE = "users.txt";
@@ -52,16 +67,16 @@ public class ChatServer {
         Runtime.getRuntime().addShutdownHook(new Thread() {
             @Override
             public void run() {
-                Logger.getLogger(UsersRegistry.class.getName()).log(Level.INFO,
+                Logger.getLogger(ChatServer.class.getName()).log(Level.INFO,
                         "Shutting down the server...");
                 chat.shutdown(3);
             }
         });
         
-        try {
+        try {            
             server.startServer();
         } catch (IOException ex) {
-            Logger.getLogger(UsersRegistry.class.getName()).log(Level.INFO, null, ex);
+            Logger.getLogger(ChatServer.class.getName()).log(Level.INFO, null, ex);
         }
     }
 }

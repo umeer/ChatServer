@@ -29,6 +29,11 @@ public class Chat {
         registry = new UsersRegistry(filename);
         registeredUsers = registry.loadUSers();        
         administrator = new Administrator();
+        
+        String msg = "" + registeredUsers.size() + " registered users:";
+        for (String s : registeredUsers.keySet())
+            msg += " " + s;
+        Logger.getLogger(Chat.class.getName()).log(Level.INFO, msg);
     }
     
     /**
@@ -108,6 +113,10 @@ public class Chat {
      */
     public void welcome(String recipient) throws ChatError {
         String msg = "Hello " + recipient + ", welcome to the chat!";
+        sendMessage(administrator, recipient, msg);
+        msg = "" + loggedUsers.size() + " logged users:";
+        for (String s : loggedUsers.keySet())
+            msg += " " + s;
         sendMessage(administrator, recipient, msg);
     }
 
