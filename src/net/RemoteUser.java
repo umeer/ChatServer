@@ -97,6 +97,7 @@ class RemoteUser extends Thread implements RegisteredUserObserver {
                 }
                 user = chat.login(tokens[0], tokens[1].toCharArray());            
                 user.addObserver(RemoteUser.this);
+                ok();
                 chat.welcome(user.getNickname());
             }
         });
@@ -136,6 +137,7 @@ class RemoteUser extends Thread implements RegisteredUserObserver {
                     error("must be logged-in");
                     return;
                 }
+                ok();
                 chat.broadCastMessage(user, args);
             }
         });

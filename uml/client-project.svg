@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="487" version="1.1" width="764" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#ffc8c8" height="187" stroke="#ffc8c8" stroke-width="1" width="140" x="14" y="206"/>
+<rect fill="none" height="187" stroke="#000000" stroke-width="1" width="140" x="14" y="206"/>
+<text font-family="Dialog" font-size="12" x="48" y="238">
+Connection</text>
+<text font-family="Dialog" font-size="12" x="43" y="220">
+&lt;&lt;thread&gt;&gt;</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="140" x="14" y="248"/>
+<text font-family="Dialog" font-size="12" x="18" y="262">
+hostName</text>
+<text font-family="Dialog" font-size="12" x="18" y="278">
+portNumber</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="140" x="14" y="288"/>
+<text font-family="Dialog" font-size="12" x="18" y="302">
+sendText()</text>
+<text font-family="Dialog" font-size="12" x="18" y="318">
+addObserver()</text>
+<text font-family="Dialog" font-size="12" x="18" y="334">
+removeObserver()</text>
+<text font-family="Dialog" font-size="12" x="18" y="350">
+notifyMessage()</text>
+<text font-family="Dialog" font-size="12" x="18" y="366">
+notifyError()</text>
+<text font-family="Dialog" font-size="12" x="18" y="382">
+notifyConnection()</text>
+<rect fill="#ffc8c8" height="181" stroke="#ffc8c8" stroke-width="1" width="120" x="222" y="206"/>
+<rect fill="none" height="181" stroke="#000000" stroke-width="1" width="120" x="222" y="206"/>
+<text font-family="Dialog" font-size="12" x="247" y="219">
+ChatServer</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="120" x="222" y="229"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="120" x="222" y="250"/>
+<text font-family="Dialog" font-size="12" x="226" y="264">
+connect()</text>
+<text font-family="Dialog" font-size="12" x="226" y="280">
+login()</text>
+<text font-family="Dialog" font-size="12" x="226" y="296">
+logout()</text>
+<text font-family="Dialog" font-size="12" x="226" y="312">
+register()</text>
+<text font-family="Dialog" font-size="12" x="226" y="328">
+sendMessage()</text>
+<text font-family="Dialog" font-size="12" x="226" y="344">
+broadcast()</text>
+<text font-family="Dialog" font-size="12" x="226" y="360">
+addObserver()</text>
+<text font-family="Dialog" font-size="12" x="226" y="376">
+removeObserver()</text>
+<rect fill="#ffc8c8" height="133" stroke="#ffc8c8" stroke-width="1" width="128" x="598" y="230"/>
+<rect fill="none" height="133" stroke="#000000" stroke-width="1" width="128" x="598" y="230"/>
+<text font-family="Dialog" font-size="12" x="607" y="243">
+ConnectionDialog</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="128" x="598" y="253"/>
+<text font-family="Dialog" font-size="12" x="602" y="267">
+hostname</text>
+<text font-family="Dialog" font-size="12" x="602" y="283">
+port</text>
+<text font-family="Dialog" font-size="12" x="602" y="299">
+nickname</text>
+<text font-family="Dialog" font-size="12" x="602" y="315">
+email</text>
+<text font-family="Dialog" font-size="12" x="602" y="331">
+password</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="128" x="598" y="341"/>
+<rect fill="#ffc8c8" height="99" stroke="#ffc8c8" stroke-width="1" width="161" x="238" y="14"/>
+<rect fill="none" height="99" stroke="#000000" stroke-width="1" width="161" x="238" y="14"/>
+<text font-family="Dialog" font-size="12" x="276" y="46">
+ChatObserver</text>
+<text font-family="Dialog" font-size="12" x="270" y="28">
+&lt;&lt;interface&gt;&gt;</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="161" x="238" y="56"/>
+<text font-family="Dialog" font-size="12" x="242" y="70">
+gotMessage()</text>
+<text font-family="Dialog" font-size="12" x="242" y="86">
+gotError()</text>
+<text font-family="Dialog" font-size="12" x="242" y="102">
+connectionEstablished()</text>
+<rect fill="#ffc8c8" height="69" stroke="#ffc8c8" stroke-width="1" width="105" x="446" y="278"/>
+<rect fill="none" height="69" stroke="#000000" stroke-width="1" width="105" x="446" y="278"/>
+<text font-family="Dialog" font-size="12" x="464" y="291">
+ChatFrame</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="105" x="446" y="301"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="105" x="446" y="322"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="450" x2="490" y1="337" y2="337"/>
+<text font-family="Dialog" font-size="12" x="450" y="336">
+main()</text>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="446" x2="441" y1="286" y2="286"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="436" x2="431" y1="286" y2="286"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="426" x2="421" y1="286" y2="286"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="416" x2="411" y1="286" y2="286"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="406" x2="401" y1="286" y2="286"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="396" x2="391" y1="286" y2="286"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="386" x2="381" y1="286" y2="286"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="376" x2="371" y1="286" y2="286"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="366" x2="366" y1="286" y2="281"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="366" x2="366" y1="276" y2="271"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="366" x2="366" y1="266" y2="261"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="366" x2="366" y1="256" y2="251"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="366" x2="366" y1="246" y2="241"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="366" x2="366" y1="236" y2="231"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="366" x2="366" y1="226" y2="221"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="366" x2="366" y1="216" y2="211"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="366" x2="366" y1="206" y2="201"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="366" x2="366" y1="196" y2="191"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="366" x2="366" y1="186" y2="181"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="366" x2="366" y1="176" y2="171"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="366" x2="366" y1="166" y2="161"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="366" x2="366" y1="156" y2="151"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="366" x2="366" y1="146" y2="141"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="366" x2="366" y1="136" y2="131"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="366" x2="366" y1="126" y2="121"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="366" x2="366" y1="116" y2="112"/>
+<polygon fill="#ffffff" points="366,112 373,124 359,124" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="366,112 373,124 359,124" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="550,312 598,312" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="586" x2="598" y1="319" y2="312"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="586" x2="598" y1="305" y2="312"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="294" x2="294" y1="206" y2="201"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="294" x2="294" y1="196" y2="191"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="294" x2="294" y1="186" y2="181"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="294" x2="294" y1="176" y2="171"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="294" x2="294" y1="166" y2="161"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="294" x2="294" y1="156" y2="151"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="294" x2="294" y1="146" y2="141"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="294" x2="294" y1="136" y2="131"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="294" x2="294" y1="126" y2="121"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="294" x2="294" y1="116" y2="112"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="301" x2="294" y1="124" y2="112"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="287" x2="294" y1="124" y2="112"/>
+<polyline fill="none" points="222,302 153,302" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="165" x2="153" y1="295" y2="302"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="165" x2="153" y1="309" y2="302"/>
+<polyline fill="none" points="446,310 341,310" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="353" x2="341" y1="303" y2="310"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="353" x2="341" y1="317" y2="310"/>
+<polyline fill="none" points="78,206 78,54 238,54" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="226" x2="238" y1="61" y2="54"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="226" x2="238" y1="47" y2="54"/>
+<text font-family="Dialog" font-size="12" x="212" y="49">
+0..*</text>
+<polygon fill="#ffffff" points="478,46 700,46 700,69 749,69 749,197 478,197 478,46" stroke="#ffffff" stroke-width="1"/>
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="222" x="478" y="46"/>
+<text font-family="Dialog" font-size="12" x="483" y="59">
+java</text>
+<rect fill="none" height="128" stroke="#000000" stroke-width="1" width="271" x="478" y="69"/>
+<rect fill="#ffffff" height="66" stroke="#ffffff" stroke-width="1" width="66" x="630" y="94"/>
+<rect fill="none" height="66" stroke="#000000" stroke-width="1" width="66" x="630" y="94"/>
+<text font-family="Dialog" font-size="12" x="642" y="107">
+JDialog</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="66" x="630" y="117"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="66" x="630" y="138"/>
+<polyline fill="none" points="670,230 670,159" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="670,159 677,171 663,171" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="670,159 677,171 663,171" stroke="#000000" stroke-width="1"/>
+<rect fill="#ffffff" height="67" stroke="#ffffff" stroke-width="1" width="66" x="502" y="94"/>
+<rect fill="none" height="67" stroke="#000000" stroke-width="1" width="66" x="502" y="94"/>
+<text font-family="Dialog" font-size="12" x="514" y="107">
+JFrame</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="66" x="502" y="117"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="66" x="502" y="138"/>
+<polyline fill="none" points="526,278 526,160" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="526,160 533,172 519,172" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="526,160 533,172 519,172" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="230,414 323,414 333,424 333,472 230,472 230,414" stroke="#ffffff" stroke-width="1"/>
+<polyline fill="none" points="230,414 323,414 333,424 333,472 230,472 230,414" stroke="#000000" stroke-width="1"/>
+<polygon fill="#b2b2b2" points="323,414 333,424 323,424 323,414" stroke="#b2b2b2" stroke-width="1"/>
+<polyline fill="none" points="323,414 333,424 323,424 323,414" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="233" y="429">
+Proxy per il</text>
+<text font-family="Dialog" font-size="12" x="233" y="444">
+server remoto</text>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="277" x2="277" y1="414" y2="409"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="277" x2="277" y1="404" y2="399"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="277" x2="277" y1="394" y2="389"/>
+</svg>
