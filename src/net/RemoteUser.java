@@ -168,6 +168,10 @@ class RemoteUser extends Thread implements RegisteredUserObserver {
             while (!stop) {
                 // Read and process a line
                 String line = in.readLine();
+                if (line == null) {
+                    log(Level.WARNING, "Invalid read: closing the connection");
+                    break;
+                }
                 log(Level.INFO, "Received: " + line);
                 String[] tokens = line.trim().split("\\s+", 2);
                 if (tokens.length == 0)
