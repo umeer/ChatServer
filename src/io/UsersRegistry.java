@@ -9,8 +9,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -38,7 +38,7 @@ public class UsersRegistry {
      * @return all the registeres users
      */
     public Map<String, RegisteredUser> loadUSers() {
-        HashMap<String, RegisteredUser> users = new HashMap<>();
+        ConcurrentHashMap<String, RegisteredUser> users = new ConcurrentHashMap<>();
         
         FileInputStream fis;
         BufferedReader br;

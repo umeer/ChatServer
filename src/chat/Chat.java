@@ -1,8 +1,8 @@
 package chat;
 
 import io.UsersRegistry;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -25,7 +25,7 @@ public class Chat {
      * @param filename path to the file with the data about the users
      */
     public Chat(String filename) {
-        loggedUsers = new HashMap<>();
+        loggedUsers = new ConcurrentHashMap<>();
         registry = new UsersRegistry(filename);
         registeredUsers = registry.loadUSers();        
         administrator = new Administrator();
