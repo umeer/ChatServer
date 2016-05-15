@@ -3,8 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/test/NetBeansProjects/Chat/src/net/ChatServer.java</file>
-            <file>file:/home/test/NetBeansProjects/Chat/src/net/RemoteUser.java</file>
+            <file>file:/home/test/NetBeansProjects/ChatServer/src/chat/RegisteredUser.java</file>
+            <file>file:/home/test/NetBeansProjects/ChatServer/src/io/UsersRegistry.java</file>
+            <file>file:/home/test/NetBeansProjects/ChatServer/src/chat/Participant.java</file>
+            <file>file:/home/test/NetBeansProjects/ChatServer/src/net/RemoteUser.java</file>
+            <file>file:/home/test/NetBeansProjects/ChatServer/src/chat/RegisteredUserObserver.java</file>
+            <file>file:/home/test/NetBeansProjects/ChatServer/src/chat/Chat.java</file>
+            <file>file:/home/test/NetBeansProjects/ChatServer/src/chat/ChatError.java</file>
         </group>
     </open-files>
 </project-private>
