@@ -70,7 +70,7 @@ public class Chat {
      * @param password the password
      * @throws ChatError 
      */
-    public void register(String nickname, String email, char[] password) throws ChatError {
+    public synchronized void register(String nickname, String email, char[] password) throws ChatError {
         // Check if there are registeredUsers with the same email or nickname.
         if (registeredUsers.get(nickname) != null)
             throw new ChatError("Nickname already taken");                  

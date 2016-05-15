@@ -35,7 +35,7 @@ public class UsersRegistry {
     /**
      * Load the data from the file.
      * 
-     * @return all the registeres users
+     * @return all the registered users
      */
     public Map<String, RegisteredUser> loadUSers() {
         ConcurrentHashMap<String, RegisteredUser> users = new ConcurrentHashMap<>();
