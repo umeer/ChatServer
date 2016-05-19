@@ -18,7 +18,7 @@ import java.util.logging.Logger;
 
 /**
  * Manage the connection with a remote user.
- * 
+ *
  * @author Claudio Cusano
  */
 class RemoteUser extends Thread implements RegisteredUserObserver {
@@ -27,17 +27,17 @@ class RemoteUser extends Thread implements RegisteredUserObserver {
     Socket socket;
     PrintWriter out;
     BufferedReader in;
-
+    
     RegisteredUser user;    
     boolean stop;
     Map<String, Command> commands;
-         
-    /** 
-    * Create a user connected with a socket.
-    * 
-    * @param chat the main chat object
-    * @param socket the socket used to communicate
-    */
+
+    /**
+     * Create a user connected with a socket.
+     *
+     * @param chat the main chat object
+     * @param socket the socket used to communicate
+     */
     RemoteUser(Chat chat, Socket socket) throws IOException {
         this.chat = chat;
         this.socket = socket;
@@ -47,27 +47,26 @@ class RemoteUser extends Thread implements RegisteredUserObserver {
         stop = false;
         registerCommands();
     }
-    
+
     // Log a message related to the user
     private void log(Level level, String msg) {
         String name = (user == null ? "null" : user.getNickname());
         String txt = "[" + name + "] " + msg;
         Logger.getLogger(UsersRegistry.class.getName()).log(level, txt);
     }
-    
-    
+
     // Send an error message to the remote user.
     private void error(String message) {
         log(Level.WARNING, "Sent error: " + message);
         out.println("ERR " + message);
     }
-    
+
     // Send an ok maesage to the remote user.
     private void ok() {
         log(Level.INFO, "'OK' sent");
         out.println("OK");
     }
-    
+
     // Create the dispatch table mapping commands to actions.
     private void registerCommands() {
         commands = new HashMap<>();
@@ -95,7 +94,7 @@ class RemoteUser extends Thread implements RegisteredUserObserver {
                     error("username and password are required");
                     return;
                 }
-                user = chat.login(tokens[0], tokens[1].toCharArray());            
+                user = chat.login(tokens[0], tokens[1].toCharArray());                
                 user.addObserver(RemoteUser.this);
                 ok();
                 chat.welcome(user.getNickname());
@@ -142,14 +141,13 @@ class RemoteUser extends Thread implements RegisteredUserObserver {
             }
         });
     }
-    
-    
+
     /**
      * Execute the given command.
-     * 
+     *
      * @param command name of the command
      * @param args optional argument(s) for the command
-     * @throws ChatError 
+     * @throws ChatError
      */
     private void executeCommand(String command, String args) throws ChatError {
         Command cmd = commands.get(command);
@@ -162,7 +160,7 @@ class RemoteUser extends Thread implements RegisteredUserObserver {
     
     @Override
     public void run() {
-        try {           
+        try {            
             stop = false;
             // Main loop of the thread.
             while (!stop) {
@@ -174,8 +172,9 @@ class RemoteUser extends Thread implements RegisteredUserObserver {
                 }
                 log(Level.INFO, "Received: " + line);
                 String[] tokens = line.trim().split("\\s+", 2);
-                if (tokens.length == 0)
+                if (tokens.length == 0) {
                     continue;  // skip empty lines
+                }
                 String command = tokens[0].toUpperCase();
                 String arg = (tokens.length > 1 ? tokens[1] : "");
                 
@@ -199,7 +198,7 @@ class RemoteUser extends Thread implements RegisteredUserObserver {
             }
         }
     }
-
+    
     @Override
     public void messageTaken(Participant sender, String message) {
         out.println("MESSAGE " + sender.getNickname() + " " + message);
@@ -208,9 +207,10 @@ class RemoteUser extends Thread implements RegisteredUserObserver {
 
 /**
  * A command received from the remote user.
- * 
+ *
  * @author Claudio Cusano
  */
 interface Command {
+
     void execute(String args) throws ChatError;
 }
