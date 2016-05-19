@@ -35,7 +35,7 @@ public class GUI_Client extends JFrame {
         this.setLayout(new BorderLayout());
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setTitle("Pannello Cliente");
-        this.setBounds(900, 100, 400, 270);
+        this.setBounds(900, 100, 400, 370);
 
         this.addWindowListener(new java.awt.event.WindowAdapter() {
             @Override
@@ -76,8 +76,8 @@ public class GUI_Client extends JFrame {
                 } else {
                     System.out.println("Connessione fallita");
                     JOptionPane.showMessageDialog(pop_upPanel,
-                            "Immpossibile collegarsi al server, provare a cambiare i dati.",
-                            "Errore",
+                            "Connection fail, try again.",
+                            "Error",
                             JOptionPane.ERROR_MESSAGE);
                 }
             }
@@ -119,7 +119,7 @@ public class GUI_Client extends JFrame {
                 } else {
                     reDraw(loginPanel());
                     JOptionPane.showMessageDialog(pop_upPanel,
-                            "Dati sbagliati.",
+                            "Wrong user/pass.",
                             "Errore",
                             JOptionPane.ERROR_MESSAGE);
                 }
@@ -157,15 +157,15 @@ public class GUI_Client extends JFrame {
                 if (adapter.sign_up(user.getText(), pass.getText(), email.getText())) {
                     reDraw(loginPanel());
                     JOptionPane.showMessageDialog(pop_upPanel,
-                            "Registrazione avvenuta con successo",
-                            "Messaggio Successo",
+                            "Sign up done!",
+                            "Welcome",
                             JOptionPane.PLAIN_MESSAGE);
 //                    adapter.close_connection();
                 } else {
                     System.out.println("Connessione fallita");
                     JOptionPane.showMessageDialog(pop_upPanel,
-                            "Immpossibile registrarsi.",
-                            "Errore",
+                            "Check all the parameter.",
+                            "Error",
                             JOptionPane.ERROR_MESSAGE);
                 }
             }
@@ -177,7 +177,7 @@ public class GUI_Client extends JFrame {
     private JPanel chatPanel() {
         JPanel display = new JPanel(new GridLayout(0, 1, 30, 30));
 
-        chatDisplay = new JTextArea("Benvenuto nella chat", 5, 1);
+        chatDisplay = new JTextArea("Welcome...", 5, 1);
         chatDisplay.setLineWrap(true);
 
         DefaultCaret caret = (DefaultCaret) chatDisplay.getCaret();
@@ -199,8 +199,8 @@ public class GUI_Client extends JFrame {
                 if (adapter.send(message.getText())) {
                 } else {
                     JOptionPane.showMessageDialog(pop_upPanel,
-                            "Immpossibile inviare messaggio.",
-                            "Errore",
+                            "Server Fail.",
+                            "Error",
                             JOptionPane.ERROR_MESSAGE);
                 }
             }
